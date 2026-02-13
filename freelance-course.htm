@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelance Brand Scaling Mastery - Transform Your Freelance Business</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #0a0a0a;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            padding: 100px 20px;
+            text-align: center;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            color: #e0e0e0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            color: #000;
+            padding: 18px 50px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.5);
+        }
+
+        /* Problem Section */
+        .problem {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 80px 20px;
+        }
+
+        .problem h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #ffd700;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .problem-card {
+            background: #2a2a2a;
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid #ff8c00;
+        }
+
+        .problem-card h3 {
+            color: #ffd700;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        /* Modules Section */
+        .modules {
+            background: #0f0f0f;
+            color: #fff;
+            padding: 80px 20px;
+        }
+
+        .modules h2 {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            text-align: center;
+            color: #ffd700;
+        }
+
+        .module-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .module-item {
+            background: linear-gradient(135deg, #1a1a2e 0%, #2a2a3e 100%);
+            padding: 30px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            border: 2px solid #333;
+        }
+
+        .module-item:hover {
+            transform: translateY(-5px);
+            border-color: #ffd700;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+        }
+
+        .module-number {
+            font-size: 3rem;
+            color: #ff8c00;
+            font-weight: bold;
+            opacity: 0.3;
+        }
+
+        .module-item h3 {
+            color: #ffd700;
+            font-size: 1.3rem;
+            margin: 10px 0;
+        }
+
+        /* Features Section */
+        .features {
+            background: #1a1a1a;
+            padding: 80px 20px;
+            color: #fff;
+        }
+
+        .features h2 {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            text-align: center;
+            color: #ffd700;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: #2a2a2a;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            background: #333;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+
+        /* Bonuses Section */
+        .bonuses {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 80px 20px;
+            color: #fff;
+        }
+
+        .bonuses h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #ffd700;
+        }
+
+        .bonus-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .bonus-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            margin: 15px 0;
+            border-radius: 10px;
+            border-left: 5px solid #ff8c00;
+            transition: all 0.3s ease;
+        }
+
+        .bonus-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(10px);
+        }
+
+        .bonus-item h3 {
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            background: #0f0f0f;
+            padding: 80px 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .pricing h2 {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #ffd700;
+        }
+
+        .price-card {
+            max-width: 500px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #1a1a2e 0%, #2a2a3e 100%);
+            padding: 50px;
+            border-radius: 20px;
+            border: 3px solid #ffd700;
+        }
+
+        .price {
+            font-size: 4rem;
+            color: #ffd700;
+            font-weight: bold;
+            margin: 30px 0;
+        }
+
+        .price-features {
+            text-align: left;
+            margin: 30px 0;
+        }
+
+        .price-features li {
+            margin: 15px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .price-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #ffd700;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background: #1a1a1a;
+            padding: 80px 20px;
+            color: #fff;
+        }
+
+        .faq h2 {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            text-align: center;
+            color: #ffd700;
+        }
+
+        .faq-item {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #2a2a2a;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .faq-item h3 {
+            color: #ffd700;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+
+            .cta-button {
+                padding: 15px 35px;
+                font-size: 1.1rem;
+            }
+
+            .problem h2, .modules h2, .features h2, .bonuses h2, .pricing h2, .faq h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Stop Trading Hours for Dollars.<br>Start Building a Scalable Brand.</h1>
+            <p>Transform Your Freelance Hustle into a 6-Figure Business</p>
+            <a href="#pricing" class="cta-button">Get Started Now →</a>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem">
+        <div class="container">
+            <h2>You're Working Harder, Not Smarter</h2>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <h3>❌ Maxed Out Hours</h3>
+                    <p>You're booked solid but turning down opportunities. There's no room to grow without burning out.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>❌ Feast or Famine</h3>
+                    <p>One month you're swamped, the next you're scrambling for clients. The cycle never ends.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>❌ Low Rates</h3>
+                    <p>You're undercharging because you don't know how to position yourself as the premium choice.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modules Section -->
+    <section class="modules">
+        <div class="container">
+            <h2>What You'll Master in 8 Transformative Modules</h2>
+            <div class="module-list">
+                <div class="module-item">
+                    <div class="module-number">01</div>
+                    <h3>Freelance Business Foundations</h3>
+                    <p>Build the essential systems every scaling freelancer needs</p>
+                </div>
+                <div class="module-item">
+                    <div class="module-number">02</div>
+                    <h3>Personal Branding & Positioning</h3>
+                    <p>Position yourself as the premium choice in your niche</p>
+                </div>
+                <div class="module-item">
+                    <div class="module-number">03</div>
+                    <h3>Client Acquisition Systems</h3>
+                    <p>Create predictable, repeatable systems for landing clients</p>
+                </div>
+                <div class="module-item">
+                    <div class="module-number">04</div>
+                    <h3>Premium Pricing & Packaging</h3>
+                    <p>Learn to charge what you're worth and package your services</p>
+                </div>
+                <div class="module-item">
+                    <div class="module-number">05</div>
+                    <h3>Systems & Automation</h3>
+                    <p>Automate repetitive tasks and multiply your productivity</p>
+                </div>
+                <div class="module-item">
+                    <div class="module-number">06</div>
+                    <h3>Team Building & Delegation</h3>
+                    <p>Scale beyond yourself by building your dream team</p>
+                </div>
+                <div class="module-item">
+                    <div class="module-number">07</div>
+                    <h3>Marketing & Lead Generation</h3>
+                    <p>Generate consistent inbound leads on autopilot</p>
+                </div>
+                <div class="module-item">
+                    <div class="module-number">08</div>
+                    <h3>Scaling to Multiple 6-Figures</h3>
+                    <p>The exact blueprint to reach and exceed $100K+ annually</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Everything You Need to Succeed</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎥</div>
+                    <h3>40+ Video Lessons</h3>
+                    <p>Over 12 hours of premium training content</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Downloadable Resources</h3>
+                    <p>Templates, worksheets, and action guides</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">♾️</div>
+                    <h3>Lifetime Access</h3>
+                    <p>Learn at your own pace, forever</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Private Community</h3>
+                    <p>Connect with fellow freelancers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bonuses Section -->
+    <section class="bonuses">
+        <div class="container">
+            <h2>🎁 Exclusive Bonuses Worth $997</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 40px;">Get instant access to these premium resources:</p>
+            <div class="bonus-list">
+                <div class="bonus-item">
+                    <h3>📄 Client Contract Templates Pack</h3>
+                    <p>Protect yourself with battle-tested legal contracts</p>
+                </div>
+                <div class="bonus-item">
+                    <h3>💼 Proposal Template Library</h3>
+                    <p>Win more clients with proven proposal templates</p>
+                </div>
+                <div class="bonus-item">
+                    <h3>📊 Pricing Calculator Spreadsheet</h3>
+                    <p>Calculate your optimal pricing instantly</p>
+                </div>
+                <div class="bonus-item">
+                    <h3>✉️ Email Scripts Collection</h3>
+                    <p>Copy-paste email templates for every situation</p>
+                </div>
+                <div class="bonus-item">
+                    <h3>🎯 Brand Strategy Workbook</h3>
+                    <p>Define your unique positioning and message</p>
+                </div>
+                <div class="bonus-item">
+                    <h3>🗺️ 90-Day Scaling Roadmap</h3>
+                    <p>Step-by-step plan to hit your first $10K month</p>
+                </div>
+                <div class="bonus-item">
+                    <h3>💬 Private Community Access</h3>
+                    <p>Network with like-minded freelancers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>Transform Your Business Today</h2>
+            <div class="price-card">
+                <h3 style="color: #ffd700; font-size: 1.5rem;">One-Time Investment</h3>
+                <div class="price">$497</div>
+                <ul class="price-features">
+                    <li>8 comprehensive modules</li>
+                    <li>40+ video lessons (12+ hours)</li>
+                    <li>All downloadable templates</li>
+                    <li>7 exclusive bonuses ($997 value)</li>
+                    <li>Lifetime access to all content</li>
+                    <li>Private community membership</li>
+                    <li>Regular content updates</li>
+                    <li>30-day money-back guarantee</li>
+                </ul>
+                <button class="cta-button" onclick="handlePurchase()">Enroll Now - $497</button>
+                <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.8;">🔒 Secure checkout • Instant access • 30-day guarantee</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>How long do I have access to the course?</h3>
+                <p>Lifetime! Once you enroll, you'll have unlimited access to all course materials forever, including all future updates.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is this course right for beginners?</h3>
+                <p>This course is designed for freelancers already earning $3K-$10K/month who are ready to scale. If you're just starting out, focus on landing your first few clients first.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What if I don't like the course?</h3>
+                <p>We offer a 30-day money-back guarantee. If you're not satisfied for any reason, just email us within 30 days for a full refund.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How long does it take to complete?</h3>
+                <p>The course contains 12+ hours of video content, but you can go at your own pace. Most students complete it within 4-6 weeks while implementing the strategies.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Do you offer payment plans?</h3>
+                <p>Currently, we only offer one-time payment. However, at $497 for content that can help you add $50K+ to your annual income, it's an investment that pays for itself quickly.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Freelance Brand Scaling Mastery. All rights reserved.</p>
+            <p>Contact: support@yourcoursedomain.com</p>
+            <p style="margin-top: 20px; opacity: 0.7;">Terms & Conditions | Privacy Policy | Refund Policy</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Purchase handler
+        function handlePurchase() {
+            alert('🎉 Ready to enroll!\n\nNext steps:\n1. Set up payment processing (Stripe, PayPal, Gumroad)\n2. Replace this alert with your payment link\n3. Start accepting payments!');
+            // Replace with actual payment link:
+            // window.location.href = 'your-payment-link-here';
+        }
+    </script>
+</body>
+</html>
